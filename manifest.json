@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Grab Cursors",
   "description": "Better Grab Cursors",
-  "version": "1.5",
+  "version": "1.6",
   "permissions": [
     "storage"
   ],
@@ -24,8 +24,8 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "cursors/grab1.png",
-        "cursors/grabbing1.png"
+        "cursors/grab1.cur",
+        "cursors/grabbing1.cur"
       ],
       "matches": ["<all_urls>"]
     }

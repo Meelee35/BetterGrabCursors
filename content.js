@@ -1,8 +1,8 @@
 let currentElement = null;
 
 // REMEMBER: Use chrome.runtime.getURL()
-const grabCursor = chrome.runtime.getURL('cursors/grab1.png');
-const grabbingCursor = chrome.runtime.getURL('cursors/grabbing1.png');
+const grabCursor = chrome.runtime.getURL('cursors/grab1.cur');
+const grabbingCursor = chrome.runtime.getURL('cursors/grabbing1.cur');
 
 // Cursors are 24x24 so I need to use 12px
 const cursorHotspotX = 12;
@@ -77,7 +77,7 @@ async function applyCursorClasses() {
 // Scan the dom every 500ms to account for elements changing
 setInterval(() => {
 	applyCursorClasses();
-} , 500); 
+} , 1000); 
 
 
 // Check element under cursor every 50ms to detect if the element sets cursor to grab or grabbing (grabbing only seems to work occasionally)
