@@ -1,8 +1,8 @@
 let currentElement = null;
 
-// REMEMBER: Use browser.extension.getURL() for the path!
-const grabCursor = browser.extension.getURL('cursors/grab1.png');
-const grabbingCursor = browser.extension.getURL('cursors/grabbing1.png');
+// REMEMBER: Use chrome.runtime.getURL()
+const grabCursor = chrome.runtime.getURL('cursors/grab1.png');
+const grabbingCursor = chrome.runtime.getURL('cursors/grabbing1.png');
 
 // Cursors are 24x24 so I need to use 12px
 const cursorHotspotX = 12;
