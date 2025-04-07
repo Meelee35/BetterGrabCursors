@@ -1,12 +1,11 @@
 let currentElement = null;
 
 // REMEMBER: Use browser.extension.getURL() for the path!
-const grabCursor = browser.extension.getURL('cursors/grab1.png');
-const grabbingCursor = browser.extension.getURL('cursors/grabbing1.png');
+const grabCursor = browser.extension.getURL('cursors/grab1.cur');
+const grabbingCursor = browser.extension.getURL('cursors/grabbing1.cur');
 
 // Cursors are 24x24 so I need to use 12px
-const cursorHotspotX = 12;
-const cursorHotspotY = 12;  
+
 
 
 
@@ -19,15 +18,15 @@ document.addEventListener('mousemove', (event) => {
 const style = document.createElement('style');
 style.innerHTML = `
 		.custom-cursor {
-				cursor: url(${grabCursor}) ${cursorHotspotX} ${cursorHotspotY}, grab !important;
+				cursor: url(${grabCursor}), grab !important;
 		}
 		
 		.custom-cursor:active {
-			cursor: url(${grabbingCursor}) ${cursorHotspotX} ${cursorHotspotY}, grabbing !important;
+			cursor: url(${grabbingCursor}), grabbing !important;
 		}
 
 		.custom-cursor-grabbing {
-				cursor: url(${grabbingCursor}) ${cursorHotspotX} ${cursorHotspotY}, grabbing !important;
+				cursor: url(${grabbingCursor}), grabbing !important;
 		}
 `;
 document.head.appendChild(style);
@@ -77,7 +76,7 @@ async function applyCursorClasses() {
 // Scan the dom every 500ms to account for elements changing
 setInterval(() => {
 	applyCursorClasses();
-} , 500); 
+} , 1000); 
 
 
 // Check element under cursor every 50ms to detect if the element sets cursor to grab or grabbing (grabbing only seems to work occasionally)

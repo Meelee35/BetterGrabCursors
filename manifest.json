@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Grab Cursors",
 	"description": "Better Grab Cursors",
-	"version": "1.5",
+	"version": "1.6",
 	"permissions": [
 			"storage"
 	],
@@ -23,5 +23,9 @@
 		"16": "icons/icon.svg",
 		"128": "icons/icon.svg"
 
-	}
+	},
+	"web_accessible_resources": [
+		"cursors/grab1.cur",
+		"cursors/grabbing1.cur"
+	]
 }
