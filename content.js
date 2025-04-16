@@ -1,3 +1,5 @@
+
+
 let currentElement = null;
 
 // REMEMBER: Use browser.extension.getURL() for the path!
@@ -74,9 +76,11 @@ async function applyCursorClasses() {
 
 
 // Scan the dom every 500ms to account for elements changing
+applyCursorClasses();
+console.log("success")
 setInterval(() => {
 	applyCursorClasses();
-} , 1000); 
+} , 5000); 
 
 
 // Check element under cursor every 50ms to detect if the element sets cursor to grab or grabbing (grabbing only seems to work occasionally)
@@ -92,5 +96,6 @@ setInterval(() => {
 						currentElement.classList.add('custom-cursor');
 				}
 		}
-}, 100);
+}, 500);
 // Originally this was 50ms but the addition of the dom scan means this doesn't have to run as often
+

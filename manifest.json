@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Grab Cursors",
 	"description": "Better Grab Cursors",
-	"version": "1.6",
+	"version": "1.7",
 	"permissions": [
 			"storage"
 	],
